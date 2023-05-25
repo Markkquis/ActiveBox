@@ -234,6 +234,7 @@ p {
 }
 
 .works__img {
+    min-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -531,11 +532,61 @@ p {
 
 .burger {
     display: none;
+    padding: 9px 2px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
 }
+
+.burger__item {
+    display: block;
+    width: 27px;
+    height: 3px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+}
+
+.burger__item:before {
+
+    top: -8px;
+}
+
+.burger__item:after {
+
+    bottom: -8px;
+}
+
+
 
 /*Media*/
 
-@media (max-width: 1200px) {}
+@media (max-width: 1300px) {
+
+    /*Works*/
+    .worls__item {
+        width: 50%;
+    }
+}
 
 @media (max-width: 991px) {
     /*Nav*/
@@ -555,4 +606,130 @@ p {
     .intro__title {
         font-size: 40px;
     }
+
+    /*featyres*/
+
+    .features__item {
+        width: 50%;
+    }
+
+    /*Team*/
+
+    .team__item {
+        width: 50%;
+        text-align: center;
+    }
+
+    .team__img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team__soc {
+        justify-content: center;
+    }
+
+    /*testim*/
+
+    .testphoto {
+        margin: 15px 0 40px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .testcontent {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 40px;
+    }
+
+
 }
+
+
+@media (max-width: 767px) {
+
+    /*intro*/
+    .intro {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__suptitle {
+        margin-bottom: 30px;
+
+        font-size: 16px;
+    }
+
+    /*featyres*/
+
+
+    .featyres {
+        margin: 40px 0;
+    }
+
+    .features__item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /*Works*/
+    .worls__item {
+        width: 100%;
+        height: 300px;
+    }
+
+    /*Team*/
+
+    .team {
+        margin: 60px 0 30px;
+    }
+
+    .team__item {
+        width: 100%;
+    }
+
+    /*testim*/
+
+    .test__text {
+        font-size: 25px;
+    }
+
+    /*Btn*/
+    .btn--long {
+        min-width: 260px;
+    }
+
+    /*download*/
+    .download {
+        margin: 50px 0;
+    }
+
+    .downl__title {
+        font-size: 24px;
+    }
+
+    /*Footer*/
+    .footer__block {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        margin-bottom: 30px;
+    }
+
+    .footer__block:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer__inner {
+        padding: 30px 0;
+    }
+}
+
